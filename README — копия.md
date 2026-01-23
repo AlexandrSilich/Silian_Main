@@ -152,6 +152,34 @@ flowchart TD
     class A,C,E artifact;
 ```
 
+## 🖼️ Визуализация в Markdown
+
+### Картинки
+
+**Локальный файл:**
+```md
+![Отчет PostgreSQL](images/report-example.png)
+```
+
+**По URL:**
+```md
+![Пример](https://example.com/report.png)
+```
+
+**HTML для управления размером:**
+```html
+<img src="images/report-example.png" alt="Отчет PostgreSQL" width="600" />
+```
+
+### Графики и диаграммы (Mermaid)
+
+```mermaid
+pie title Пример распределения
+    "Критично" : 10
+    "Предупреждения" : 30
+    "Норма" : 60
+```
+
 ### Настройка файлов по умолчанию
 
 Измените глобальные переменные в скриптах:
