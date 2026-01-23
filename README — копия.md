@@ -112,11 +112,17 @@ python analyze_db_report.py *.xlsx
 ## 🗺️ Диаграмма проекта
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#E8F5E9", "primaryTextColor": "#1B5E20", "lineColor": "#2E7D32", "tertiaryColor": "#FFFDE7" }}}%%
 flowchart TD
     A[HTML отчеты PostgreSQL] --> B[parse_html_to_excel.py]
     B --> C[Excel файлы .xlsx]
     C --> D[analyze_db_report.py]
     D --> E[MD отчет ReportDB_*.md]
+
+    classDef script fill:#E3F2FD,stroke:#1565C0,stroke-width:1px,color:#0D47A1;
+    classDef artifact fill:#FFF3E0,stroke:#EF6C00,stroke-width:1px,color:#E65100;
+    class B,D script;
+    class A,C,E artifact;
 ```
 
 ### Настройка файлов по умолчанию
